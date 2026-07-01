@@ -7,7 +7,7 @@ const PASOS = [
     titulo: 'Crear el proyecto',
     desc: 'Genera un proyecto React con TypeScript usando Vite.',
     icon: 'terminal',
-    codigo: `npm create vite@latest react-demo
+    codigo: `pnpm create vite@latest react-demo
 # Seleccionar: React → TypeScript
 
 cd react-demo
@@ -143,63 +143,64 @@ createRoot(document.getElementById('root')!).render(
 
 function HomePage() {
   return (
-    <div className="max-w-4xl mx-auto">
-      {/* Hero */}
-      <div className="mb-16">
-        <h1 className="mb-4">Kit Digital</h1>
-        <p className="text-grey text-xl">
-          Guía de implementación del sistema de diseño institucional usando
-          Tailwind CSS v4 + React + Vite. Sigue los pasos para configurar el
-          proyecto desde cero.
-        </p>
-      </div>
-
-      {/* Paso a paso */}
-      <div className="relative">
-        {/* Línea vertical */}
-        <div className="absolute left-6 top-0 bottom-0 w-px bg-grey/20 dark:bg-grey/30 hidden sm:block" />
-
-        <div className="space-y-10">
-          {PASOS.map(({ numero, titulo, desc, icon, codigo }) => (
-            <div key={numero} className="flex gap-6">
-              {/* Indicador */}
-              <div className="shrink-0 flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold font-serif text-sm z-10">
-                  {numero}
-                </div>
-              </div>
-
-              {/* Contenido */}
-              <div className="flex-1 pb-2">
-                <div className="flex items-center gap-3 mb-1">
-                  <FeatherIcon icon={icon} size={18} className="text-primary" />
-                  <h3 className="m-0">{titulo}</h3>
-                </div>
-                <p className="text-grey mt-1 mb-3">{desc}</p>
-                <pre className="text-sm rounded-lg p-4 overflow-x-auto whitespace-pre-wrap break-all bg-white dark:bg-black/40 text-grey border border-grey/20 dark:border-grey/30">
-                  <code>{codigo}</code>
-                </pre>
-              </div>
-            </div>
-          ))}
+    <div className="max-w-300 mx-auto px-6">
+      <div className="max-w-3xl mx-auto">
+        {/* Hero */}
+        <div className="mb-16">
+          <h1 className="mb-4">React Demo</h1>
+          <p className="text-grey text-xl">
+            Guía de implementación del sistema de diseño institucional usando
+            Tailwind CSS v4 + React + Vite. Sigue los pasos para configurar el
+            proyecto desde cero.
+          </p>
         </div>
-      </div>
 
-      {/* CTA final */}
-      <div className="mt-16 p-8 rounded-lg bg-primary text-white text-center">
-        <h2 className="text-white m-0 mb-2">
-          ¿Listo para explorar los componentes?
-        </h2>
-        <p className="text-white/80 m-0 mb-6">
-          Navega por las secciones del menú para ver tipografía, botones, cajas,
-          tablas, acordeones y alertas.
-        </p>
-        <Link
-          to="/tipografia"
-          className="inline-flex items-center gap-2 bg-yellow text-black font-bold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity"
-        >
-          Ver componentes <FeatherIcon icon="chevron-right" size={18} />
-        </Link>
+        {/* Paso a paso */}
+        <div className="relative">
+          <div className="absolute left-6 top-0 bottom-0 w-px bg-grey/20 dark:bg-grey/30 hidden sm:block" />
+          <div className="space-y-10">
+            {PASOS.map(({ numero, titulo, desc, icon, codigo }) => (
+              <div key={numero} className="flex gap-6">
+                <div className="shrink-0 flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold font-serif text-sm z-10">
+                    {numero}
+                  </div>
+                </div>
+                <div className="flex-1 pb-2">
+                  <div className="flex items-center gap-3 mb-1">
+                    <FeatherIcon
+                      icon={icon}
+                      size={18}
+                      className="text-primary"
+                    />
+                    <h3 className="m-0">{titulo}</h3>
+                  </div>
+                  <p className="text-grey mt-1 mb-3">{desc}</p>
+                  <pre className="text-sm rounded-lg p-4 overflow-x-auto whitespace-pre-wrap break-all bg-white dark:bg-black/40 text-grey border border-grey/20 dark:border-grey/30">
+                    <code>{codigo}</code>
+                  </pre>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA final */}
+        <div className="mt-16 p-8 rounded-lg bg-primary text-white text-center">
+          <h2 className="text-white m-0 mb-2">
+            ¿Listo para explorar los componentes?
+          </h2>
+          <p className="text-white/80 m-0 mb-6">
+            Navega por las secciones del menú para ver tipografía, botones,
+            cajas, tablas, acordeones y alertas.
+          </p>
+          <Link
+            to="/tipografia"
+            className="inline-flex items-center gap-2 bg-yellow text-black font-bold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            Ver componentes <FeatherIcon icon="chevron-right" size={18} />
+          </Link>
+        </div>
       </div>
     </div>
   );

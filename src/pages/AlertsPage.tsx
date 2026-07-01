@@ -55,7 +55,7 @@ const ALERTS = [
 
 export default function AlertsPage() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-300 mx-auto px-6">
       <h2>Mensajes y Notificaciones</h2>
       <div className="mt-6 space-y-6">
         {ALERTS.map(({ tipo, icon, bg, border, text, iconCls, label, msg }) => (

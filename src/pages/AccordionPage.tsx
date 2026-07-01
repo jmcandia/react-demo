@@ -75,7 +75,7 @@ export default function AccordionPage() {
   const [openCol, setOpenCol] = useState<number | null>(null);
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-300 mx-auto px-6">
       <h2>Acordeones</h2>
       <div className="mt-6 space-y-12">
         {/* ── Acordeón simple ──────────────────────────────────── */}

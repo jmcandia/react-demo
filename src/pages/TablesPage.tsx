@@ -9,7 +9,7 @@ export default function TablesPage() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-300 mx-auto px-6">
       <h2>Tablas y Listas</h2>
       <div className="mt-6 space-y-12">
         {/* ── Tabla ───────────────────────────────────────────── */}

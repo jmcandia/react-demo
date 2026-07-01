@@ -2,7 +2,7 @@ import FeatherIcon from 'feather-icons-react';
 
 export default function ButtonsPage() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-300 mx-auto px-6">
       <h2>Botones e Íconos</h2>
       <div className="mt-6 space-y-0">
         {[

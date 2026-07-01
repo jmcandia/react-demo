@@ -2,7 +2,7 @@ import FeatherIcon from 'feather-icons-react';
 
 export default function BoxesPage() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-300 mx-auto px-6">
       <h2>Cajas y Bloques</h2>
       <div className="mt-6 space-y-12">
         {/* ── 1. Box foto + link — 4 columnas ─────────────────── */}
