@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-black: #1a1a1a;
+  --color-white: #eeeeee;
+  --color-yellow: #ffb800;
+  --color-grey: #666666;
+  --color-primary: #307fe2;
+  --color-secondary: #8bb8e8;
+
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-sans: 'Lato', system-ui, sans-serif;
+
+  --font-size-h1: 2.6875rem;
+  --font-size-h2: 2.1rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h5: 1rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.8125rem;
+}
+
+@layer base {
+  h1 {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h2 {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  h3 {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  h4 {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-h4);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  h5 {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-h5);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  p {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  small {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
