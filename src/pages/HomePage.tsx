@@ -1,4 +1,5 @@
 import FeatherIcon from 'feather-icons-react';
+import { Link } from 'react-router-dom';
 
 const PASOS = [
   {
@@ -193,12 +194,12 @@ function HomePage() {
           Navega por las secciones del menú para ver tipografía, botones, cajas,
           tablas, acordeones y alertas.
         </p>
-        <a
-          href="/tipografia"
+        <Link
+          to="/tipografia"
           className="inline-flex items-center gap-2 bg-yellow text-black font-bold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity"
         >
           Ver componentes <FeatherIcon icon="chevron-right" size={18} />
-        </a>
+        </Link>
       </div>
     </div>
   );
